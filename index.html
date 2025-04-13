@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rosario Hecho con Amor - Artesanías Navideñas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Scripts en el head con defer para cargar en orden -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>🎄 Rosario Hecho con Amor 🎁</h1>
+    <p>Artesanías navideñas confeccionadas con dedicación</p>
+  </header>
+
+  <div id="filtros">
+    <label for="categoria">Filtrar por categoría:</label>
+    <select id="categoria">
+      <option value="todos">Todos los productos</option>
+      <option value="muñecos">Muñecos Navideños</option>
+      <option value="adornos">Adornos</option>
+      <option value="ropa">Ropa Navideña</option>
+    </select>
+  </div>
+
+  <section id="productos"></section>
+
+  <section class="carrito">
+    <h2>🛒 Carrito de Compras</h2>
+    <p class="info-carrito">Productos en carrito: <span id="cantidad-carrito">0</span></p>
+    <ul id="lista-carrito"></ul>
+    <p class="info-carrito"><strong>Total: $<span id="total">0.00</span></strong></p>
+    <div class="botones-carrito">
+      <button class="vaciar">🧼 Vaciar Carrito</button>
+      <button class="finalizar">✅ Finalizar Compra</button>
+    </div>
+
+    <div class="pago">
+      <h3>💳 Método de pago</h3>
+      <div id="paypal-button-container" style="margin-top: 10px; display: none;"></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Rosario Hecho con Amor | Artesanías navideñas con amor</p>
+  </footer>
+
+  <!-- PayPal SDK -->
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"></script>
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+</html>
